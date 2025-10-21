@@ -1,0 +1,202 @@
+[
+{
+"id": 1,
+"title": "Grand Theft Auto V",
+"coverPhoto": "https://i.ytimg.com/vi_webp/WozHvdDLQyQ/maxresdefault.webp",
+"category": "Open World",
+"downloadLink": "https://www.rockstargames.com/gta-v",
+"description": "Grand Theft Auto V is an action-adventure game set in the sprawling city of Los Santos. Players control three protagonists—Michael, Franklin, and Trevor—as they navigate a world of heists, crime, and personal dramas. The game features a massive open world filled with dynamic missions, side activities, and satirical takes on modern American culture.",
+"ratings": 4.8,
+"developer": "Rockstar North"
+},
+{
+"id": 2,
+"title": "Cyberpunk 2077",
+"coverPhoto": "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/1000002644.jpg",
+"category": "RPG",
+"downloadLink": "https://www.cyberpunk.net/",
+"description": "Cyberpunk 2077 is a story-driven open-world RPG set in the dystopian Night City. As V, a customizable mercenary, players engage in high-stakes missions, corporate espionage, and street-level brawls. The game blends deep narrative choices with fluid combat, hacking, and exploration in a neon-lit urban sprawl.",
+"ratings": 4.7,
+"developer": "CD Projekt Red"
+},
+{
+"id": 3,
+"title": "Watch Dogs 2",
+"coverPhoto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/447040/capsule_616x353.jpg?t=1751986887",
+"category": "Open World",
+"downloadLink": "https://www.ubisoft.com/en-us/game/watch-dogs/legion",
+"description": "Watch Dogs 2 follows hacker Marcus Holloway in a vibrant San Francisco. Players use advanced tech to hack drones, vehicles, and infrastructure, uncovering corporate conspiracies. The game emphasizes co-op multiplayer, puzzle-solving, and satirical commentary on tech culture in an expansive urban playground.",
+"ratings": 4.5,
+"developer": "Ubisoft Montreal"
+},
+{
+"id": 4,
+"title": "Marvel's Spider-Man",
+"coverPhoto": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817070/header.jpg?t=1750955096",
+"category": "Action Adventure",
+"downloadLink": "https://www.playstation.com/en-us/games/marvels-spider-man/",
+"description": "Marvel's Spider-Man lets players swing through an open-world New York City as Peter Parker battles villains like Doc Ock and Mister Negative. Combining web-slinging traversal, combo-based combat, and heartfelt storytelling, it's a love letter to the Spider-Man comics with seamless urban exploration.",
+"ratings": 4.9,
+"developer": "Insomniac Games"
+},
+{
+"id": 5,
+"title": "Batman: Arkham Knight",
+"coverPhoto": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/208650/capsule_616x353.jpg?t=1745534372",
+"category": "Action Adventure",
+"downloadLink": "https://www.playstation.com/en-us/games/batman-arkham-knight/",
+"description": "Batman: Arkham Knight concludes the Arkham trilogy with a Gotham under siege by Scarecrow and the Arkham Knight. Players use gadgets, stealth, and brutal combat to dismantle the militia, all while uncovering Batman's past. The game features a drivable Batmobile and a richly detailed urban nightscape.",
+"ratings": 4.6,
+"developer": "Rocksteady Studios"
+},
+{
+"id": 6,
+"title": "PUBG: Battlegrounds",
+"coverPhoto": "https://www.godisageek.com/wp-content/uploads/PUBG_BATTLEGROUNDS_F2P_Key_Asset_002-1024x576.jpg",
+"category": "FPS",
+"downloadLink": "https://www.pubg.com/en/game-info/overview",
+"description": "PUBG: Battlegrounds is the pioneering battle royale where up to 100 players parachute onto a massive map, scavenge for gear, and fight to be the last survivor. Realistic ballistics, vehicle combat, and tense urban firefights define this multiplayer staple set across diverse terrains.",
+"ratings": 4.5,
+"developer": "PUBG Studios"
+},
+{
+"id": 7,
+"title": "Fortnite",
+"coverPhoto": "https://cdn1.epicgames.com/offer/fn/EN_FNECO_37-40_Fortnitemares_EGS_Launcher_KeyArt_Blade_2560x1440_2560x1440-7cd6b5582095778b8a2d12d746c68675",
+"category": "Battle Royale",
+"downloadLink": "https://www.epicgames.com/fortnite/en-US/home",
+"description": "Fortnite is a free-to-play battle royale with building mechanics, vibrant graphics, and endless seasonal updates. Players squad up on an ever-evolving island, outbuilding and outshooting foes. Beyond PvP, it offers creative modes, concerts, and crossovers in a colorful, urban-inspired world.",
+"ratings": 4.3,
+"developer": "Epic Games"
+},
+{
+"id": 8,
+"title": "Call of Duty: Warzone",
+"coverPhoto": "https://bnetcmsus-a.akamaihd.net/cms/gallery/N2KT6ZURN6Z31668019382296.jpg",
+"category": "FPS",
+"downloadLink": "https://www.callofduty.com/warzone",
+"description": "Call of Duty: Warzone delivers fast-paced battle royale action with loadout drops, gulag respawns, and cross-progression. Set in massive maps like Verdansk, players engage in squad-based shootouts, blending CoD's signature gunplay with strategic urban warfare and vehicle chases.",
+"ratings": 4.6,
+"developer": "Infinity Ward"
+},
+{
+"id": 9,
+"title": "Apex Legends",
+"coverPhoto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1172470/f002ac48d98f501231e7d8bd3cc418b65c8d511a/capsule_616x353.jpg?t=1754578148",
+"category": "FPS",
+"downloadLink": "https://www.ea.com/games/apex-legends",
+"description": "Apex Legends is a hero shooter battle royale featuring Legends with unique abilities. Teams drop into dynamic arenas, using smart movement and synergies to outlast opponents. The game's lore-rich universe and ranked modes make it a competitive urban sci-fi showdown.",
+"ratings": 4.7,
+"developer": "Respawn Entertainment"
+},
+{
+"id": 10,
+"title": "Deus Ex: Mankind Divided",
+"coverPhoto": "https://wp.freedomhost.uk/howtokillanhour/wp-content/uploads/sites/65/2016/09/Deus-Ex-Mankind-Divided-Wallpaper-HD-1030x579.jpg",
+"category": "RPG",
+"downloadLink": "https://www.deusex.com/game/deus-ex-mankind-divided",
+"description": "Deus Ex: Mankind Divided places Adam Jensen in a divided Prague rife with augmented human tensions. Players choose stealth, hacking, or combat paths through conspiracies, exploring a cyberpunk city with branching narratives and moral choices in a near-future urban dystopia.",
+"ratings": 4.4,
+"developer": "Eidos Montreal"
+},
+{
+"id": 11,
+"title": "L.A. Noire",
+"coverPhoto": "https://gaming-cdn.com/images/products/396/616x353/l-a-noire-complete-edition-complete-edition-pc-game-rockstar-cover.jpg?v=1657882210",
+"category": "Action Adventure",
+"downloadLink": "https://www.rockstargames.com/lanoire",
+"description": "L.A. Noire immerses players as detective Cole Phelps in 1940s Los Angeles, solving crimes from murders to corruption. Innovative facial animation tech enhances interrogations, while open-world driving and shootouts capture the noir essence of Hollywood's underbelly.",
+"ratings": 4.3,
+"developer": "Team Bondi"
+},
+{
+"id": 12,
+"title": "Sleeping Dogs",
+"coverPhoto": "https://i.ytimg.com/vi/z0t1qjnacSs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLABYQ1rGXp2tjmWf_cMyQA1mmldMA",
+"category": "Open World",
+"downloadLink": "https://store.steampowered.com/agecheck/app/202170/",
+"description": "Sleeping Dogs follows undercover cop Wei Shen infiltrating Hong Kong triads. Blending martial arts combat, high-speed chases, and RPG elements, players navigate a bustling city rife with betrayal, honor, and street justice in a gritty urban crime saga.",
+"ratings": 4.6,
+"developer": "United Front Games"
+},
+{
+"id": 13,
+"title": "Mafia: Definitive Edition",
+"coverPhoto": "https://www.godisageek.com/wp-content/uploads/mafia-definitive-edition-review.jpg",
+"category": "Action Adventure",
+"downloadLink": "https://www.2k.com/en-US/game/mafia-definitive-edition/",
+"description": "Mafia: Definitive Edition remasters the 1930s tale of Tommy Angelo's rise in the mob. Linear yet immersive, it features cinematic storytelling, period-accurate cars, and intense shootouts across a detailed Lost Heaven, capturing the era's criminal allure.",
+"ratings": 4.5,
+"developer": "Hangar 13"
+},
+{
+"id": 14,
+"title": "Yakuza 0",
+"coverPhoto": "https://cdn.sega.co.uk/mhc-sega/public/content/media/images/raster/yakuza0dc-horizontal_cover_1.jpg",
+"category": "Action Adventure",
+"downloadLink": "https://www.sega.com/like-a-dragon-yakuza/yakuza-0-directors-cut",
+"description": "Yakuza 0 is a prequel set in 1980s Japan, following Kiryu and Majima through yakuza wars in Tokyo and Osaka. With brawling combat, mini-games, and soap opera drama, it captures the neon-lit streets, karaoke bars, and underworld intrigue of bubble-era Japan.",
+"ratings": 4.8,
+"developer": "Ryu Ga Gotoku Studio"
+},
+{
+"id": 15,
+"title": "The Division 2",
+"coverPhoto": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3FYr0BWQBNMOtsszigyDo4/b059325673b4a0d2809eae94c9b74053/tctd2-meta_images_default-960x540.jpg",
+"category": "RPG",
+"downloadLink": "https://www.ubisoft.com/en-us/game/the-division/the-division-2",
+"description": "The Division 2 transports agents to a post-pandemic Washington D.C., rebuilding society amid factions. Third-person cover shooting, loot systems, and co-op raids blend with urban exploration, from the White House to derelict subways, in a tense survival shooter.",
+"ratings": 4.4,
+"developer": "Massive Entertainment"
+},
+{
+"id": 16,
+"title": "Dying Light 2 Stay Human",
+"coverPhoto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/534380/bb99b9529e0585181f0c09fa6b9eff324dba0675/capsule_616x353.jpg?t=1755623287",
+"category": "Action RPG",
+"downloadLink": "https://store.epicgames.com/en-US/p/dying-light-2-stay-human",
+"description": "Dying Light 2 follows Aiden Caldwell in a zombie-overrun city where choices shape the world. Parkour traversal, daylight scavenging, and brutal night combat define this open-world horror, with faction alliances altering urban landscapes and survivor fates.",
+"ratings": 4.5,
+"developer": "Techland"
+},
+{
+"id": 17,
+"title": "Control",
+"coverPhoto": "https://i.ytimg.com/vi/1JmnUcbeR_M/maxresdefault.jpg",
+"category": "Action Adventure",
+"downloadLink": "https://www.remedygames.com/games/control",
+"description": "Control casts Jesse Faden as the director of the Federal Bureau of Control, battling the Hiss in a shifting Brutalist building. Telekinetic powers, gunplay, and supernatural mysteries unfold in an ever-changing urban labyrinth of otherworldly architecture.",
+"ratings": 4.6,
+"developer": "Remedy Entertainment"
+},
+{
+"id": 18,
+"title": "Alan Wake 2",
+"coverPhoto": "https://cdn1.epicgames.com/offer/c4763f236d08423eb47b4c3008779c84/EGS_AlanWake2_RemedyEntertainment_S1_2560x1440-ec44404c0b41bc457cb94cd72cf85872",
+"category": "Survival Horror",
+"downloadLink": "https://www.remedygames.com/games/alan-wake-2",
+"description": "Alan Wake 2 intertwines FBI agent Saga Anderson and writer Alan Wake in a Pacific Northwest town plagued by darkness. Light-based combat, psychological horror, and narrative loops explore creativity's dark side in rain-soaked urban and rural horrorscapes.",
+"ratings": 4.9,
+"developer": "Remedy Entertainment"
+},
+{
+"id": 19,
+"title": "Resident Evil 2 Remake",
+"coverPhoto": "https://i.ytimg.com/vi/UyifYw5QyUs/sddefault.jpg",
+"category": "Survival Horror",
+"downloadLink": "https://www.capcom.com/residentevil2/",
+"description": "Resident Evil 2 Remake revives Leon Kennedy and Claire Redfield's rookie night in zombie-infested Raccoon City. Over-the-shoulder shooting, resource management, and puzzle-solving navigate police stations and sewers in a tense, urban zombie apocalypse.",
+"ratings": 4.9,
+"developer": "Capcom"
+},
+{
+"id": 20,
+"title": "Vampire: The Masquerade - Bloodlines",
+"coverPhoto": "https://xboxwire.thesourcemediaassets.com/sites/2/2020/04/Thumbnail-XboxTrailer.jpg",
+"category": "RPG",
+"downloadLink": "https://www.gog.com/en/game/vampire_the_masquerade_bloodlines",
+"description": "Vampire: The Masquerade - Bloodlines thrusts players into L.A.'s vampire underworld as a fledgling Kindred. Dialogue-driven quests, clan abilities, and moral choices weave through nightclubs, mansions, and alleys in a richly immersive urban gothic horror RPG.",
+"ratings": 4.7,
+"developer": "Troika Games"
+}
+]

@@ -8,9 +8,9 @@ import { Menu, X } from 'lucide-react';
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     return (
-        <nav className="w-full">
+        <nav className="w-full py-4">
             <Container>
-                <div className="mx-auto flex justify-between items-center h-12 my-4">
+                <div className="mx-auto flex justify-between items-center h-12 ">
                     <div className="flex items-center gap-2">
                         <NavLink to='/'>
                             <img

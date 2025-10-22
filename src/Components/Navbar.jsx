@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import Container from './Container';
 import logo from '../assets/PixelHood-logo.png'
 import { Link, NavLink } from 'react-router';
 import { Menu, X } from 'lucide-react';
+import { AuthContext } from '../Provider/AuthProvider';
 
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const { user,logOut } = use(AuthContext)
+
+    const handleLogOut = ()=>{
+        logOut()
+        .then(()=>{
+            alert('log Out successful')
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+    }
+
+
     return (
         <nav className="w-full py-4">
             <Container>
@@ -47,10 +61,10 @@ const Navbar = () => {
 
                     </ul>
 
-                            {/* button  */}
+                    {/* button  */}
                     <div className="hidden md:flex items-center gap-4">
-                        <Link to='/auth/login' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">Login</Link>
-                        <Link to='/auth/register' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">Register</Link>
+                        {user ? <img className='w-12 h-12 rounded-full' src={`${user?.photoURL}`} alt="User" /> : <Link to='/auth/login' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">Login</Link>}
+                        {user ? <button onClick={handleLogOut} className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">log out</button> : <Link to='/auth/register' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">Register</Link>}
                     </div>
 
                     <button

@@ -5,10 +5,10 @@ import { Link } from 'react-router';
 const Login = () => {
     return (
         <Container>
-            <div className='flex justify-between items-center min-h-screen'>
-                <div className='flex-1'></div>
-                <div className='flex-1'>
-                    <fieldset className="fieldset rounded-box w-10/12 border border-purple-900 bg-[#00000088] p-4 py-8 ">
+            <div className='flex flex-col md:flex-row md:justify-between items-center min-h-screen w-full'>
+                <div className='md:flex-1'></div>
+                <div className='md:flex-1 w-full mx-auto'>
+                    <fieldset className="fieldset rounded-box md:w-10/12 border border-purple-900 bg-[#00000088] p-4 py-8 my-12">
                         <h2 className='text-3xl text-center font-bold'>Login</h2>
 
                         <label className="label">Email</label>

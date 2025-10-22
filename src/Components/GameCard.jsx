@@ -4,7 +4,7 @@ import React from 'react';
 const GameCard = ({game}) => {
     console.log(game);
     return (
-        <div className='bg-[#00000050] p-5 rounded-md space-y-4 cursor-pointer hover:opacity-100 opacity-70 duration-500'>
+        <div className='bg-[#00000050] p-5 rounded-md space-y-4 cursor-pointer hover:opacity-100 md:opacity-70 duration-500'>
             <img className='md:w-[550px] h-86 rounded-md' src={game.coverPhoto} alt={game.title} />
             <h2 className='text-3xl font-bold text-purple-200'>{game.title}</h2>
             <p className='line-clamp-2 text-purple-300'>{game.description}</p>

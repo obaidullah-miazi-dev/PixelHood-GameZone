@@ -2,9 +2,9 @@ import React from 'react';
 
 const Slide_2 = () => {
     return (
-        <div className='w-full flex justify-between items-center mt-12 bg-[#00000036] p-10 px-16'>
+        <div className='w-full flex flex-col-reverse md:flex-row justify-between items-center mt-12 bg-[#00000036] p-10 px-16 gap-5'>
             <div className='flex-1 w-full space-y-4'>
-                <h2 className='md:text-6xl text-4xl font-bold'>Batman: Arkham Knight</h2>
+                <h2 className='md:text-6xl text-xl font-bold'>Batman: Arkham Knight</h2>
                 <p className='px-0 md:pr-40'>
                     Batman: Arkham Knight concludes the Arkham trilogy with a Gotham under siege by Scarecrow and the Arkham Knight. Players use gadgets, stealth, and brutal combat to dismantle the militia, all while uncovering Batman's past. The game features a drivable Batmobile and a richly detailed urban nightscape.
                 </p>

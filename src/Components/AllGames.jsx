@@ -5,7 +5,6 @@ import GameCard from './GameCard';
 
 const AllGames = () => {
     const { gameData } = useData()
-    console.log(gameData);
     return (
         <Container>
             <div className='mt-16'>
@@ -13,7 +12,7 @@ const AllGames = () => {
                 <p className='text-center text-purple-200'>
                     Explore our full collection of urban-style games from action-packed adventures to street-smart challenges.
                 </p>
-                <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mt-12'>
+                <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 mt-12'>
                     {
                         gameData.map(game => <GameCard key={game.id} game={game}></GameCard>)
                     }

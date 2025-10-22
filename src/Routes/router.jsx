@@ -3,6 +3,7 @@ import MainLayout from "../Layouts/MainLayout";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
+import GameDetails from "../Components/GameDetails";
 
 export const router = createBrowserRouter([
     {
@@ -20,7 +21,12 @@ export const router = createBrowserRouter([
             {
                 path: '/contact',
                 Component: Contact
+            },
+            {
+                path: '/game-details/:id',
+                Component: GameDetails
             }
+
         ]
     }
 ])

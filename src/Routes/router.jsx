@@ -6,6 +6,7 @@ import Contact from "../Pages/Contact";
 import GameDetails from "../Components/GameDetails";
 import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 export const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ export const router = createBrowserRouter([
             {
                 path: '/auth/login',
                 Component: Login
+            },
+            {
+                path: '/auth/register',
+                Component: Register
             }
         ]
     }

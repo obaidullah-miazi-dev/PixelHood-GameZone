@@ -1,3 +1,4 @@
 .bg-img{
     background-image: url(../assets/login-page-bg.png);
+    background-size: cover;
 }

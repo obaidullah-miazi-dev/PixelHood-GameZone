@@ -4,6 +4,8 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import GameDetails from "../Components/GameDetails";
+import AuthLayout from "../Layouts/AuthLayout";
+import Login from "../Pages/Login";
 
 export const router = createBrowserRouter([
     {
@@ -27,6 +29,16 @@ export const router = createBrowserRouter([
                 Component: GameDetails
             }
 
+        ]
+    },
+    {
+        path: '/auth',
+        Component: AuthLayout,
+        children:[
+            {
+                path: '/auth/login',
+                Component: Login
+            }
         ]
     }
 ])

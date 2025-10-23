@@ -14,6 +14,12 @@ const Register = () => {
         const photoURL = e.target.photo.value
         const email = e.target.email.value
         const password = e.target.password.value
+        const passValidationRegEx = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+        if(!passValidationRegEx.test(password)){
+            alert('Password must contain at least 1 uppercase, 1 lowercase and 6 characters')
+            return 
+        }
         createUser(email, password)
             .then(res => {
                 const user = res.user

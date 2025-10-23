@@ -1,7 +1,7 @@
 import React, { use, useState } from 'react';
 import Container from './Container';
 import logo from '../assets/PixelHood-logo.png'
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 import { Menu, X } from 'lucide-react';
 import { AuthContext } from '../Provider/AuthProvider';
 
@@ -9,6 +9,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const { user, logOut } = use(AuthContext)
+    const navigate = useNavigate()
 
     const handleLogOut = () => {
         logOut()
@@ -18,6 +19,7 @@ const Navbar = () => {
             .catch(error => {
                 console.log(error);
             })
+            navigate('/')
     }
 
 

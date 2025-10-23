@@ -3,11 +3,12 @@ import { useParams } from 'react-router';
 import useData from '../Hooks/useData';
 import Container from './Container';
 import { Download, StarIcon } from 'lucide-react';
+import Loading from './Loading';
 
 const GameDetails = () => {
     const { id } = useParams()
     const { gameData, loading } = useData()
-    if (loading) return <p>loading....</p>
+    if (loading) return <Loading></Loading>
     const GameDetail = gameData?.find(game => game.id === Number(id))
     const { coverPhoto, title, description, developer, category, ratings, downloadLink } = GameDetail
     // console.log(GameDetail);

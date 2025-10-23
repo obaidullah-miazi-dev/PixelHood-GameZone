@@ -2,11 +2,12 @@ import React, { use } from 'react';
 import Container from './Container';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Link } from 'react-router';
+import Loading from './Loading';
 
 const MyProfile = () => {
     const { user, loading } = use(AuthContext)
     if (loading) {
-        return <p>loading...</p>
+        return <Loading></Loading>
     }
     console.log(user);
     return (

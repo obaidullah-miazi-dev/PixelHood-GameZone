@@ -1,10 +1,12 @@
 import React, { use } from 'react';
 import Container from '../Components/Container';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Register = () => {
     const { createUser, setUser, updateUser,googleLogIn } = use(AuthContext)
+    const navigate = useNavigate()
+    console.log(location);
     const handleRegister = (e) => {
         e.preventDefault()
         // console.log(e.target);
@@ -30,6 +32,8 @@ const Register = () => {
                 console.log(error);
             })
 
+        
+
     }
 
     const handleGoogleLogIn = () => {
@@ -41,6 +45,8 @@ const Register = () => {
             .catch(error => {
                 console.log(error);
             })
+
+            navigate('/')
     }
     return (
         <Container>
@@ -51,16 +57,16 @@ const Register = () => {
                         <h2 className='text-3xl text-center font-bold'>Register</h2>
 
                         <label className="label">Name</label>
-                        <input name='name' type="text" className="input w-full bg-transparent mb-3  " placeholder="Full Name" />
+                        <input name='name' type="text" className="input w-full bg-transparent mb-3  " placeholder="Full Name" required/>
 
                         <label className="label">Photo URL</label>
-                        <input name='photo' type="text" className="input w-full bg-transparent mb-3  " placeholder="Photo Url" />
+                        <input name='photo' type="text" className="input w-full bg-transparent mb-3  " placeholder="Photo Url" required/>
 
                         <label className="label">Email</label>
-                        <input name='email' type="email" className="input w-full bg-transparent mb-3  " placeholder="Email" />
+                        <input name='email' type="email" className="input w-full bg-transparent mb-3  " placeholder="Email" required/>
 
                         <label className="label">Password</label>
-                        <input name='password' type="password" className="input w-full bg-transparent mb-3  " placeholder="Password" />
+                        <input name='password' type="password" className="input w-full bg-transparent mb-3  " placeholder="Password" required/>
 
 
                         <button type='submit' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-box justify-center mt-5">Register</button>

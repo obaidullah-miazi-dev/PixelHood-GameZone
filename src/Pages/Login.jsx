@@ -1,10 +1,13 @@
 import React, { use } from 'react';
 import Container from '../Components/Container';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
     const { logIn, setUser,googleLogIn } = use(AuthContext)
+    const location = useLocation()
+    console.log(location);
+    const navigate = useNavigate()
     const handleLogIn = (e) => {
         e.preventDefault()
         const email = e.target.email.value
@@ -13,10 +16,13 @@ const Login = () => {
             .then(res => {
                 alert('LogIn successful')
                 setUser(res.user)
+                
             })
             .catch(error => {
                 console.log(error);
             })
+
+            navigate(`${location.state?location.state:'/'}`)
     }
 
     const handleGoogleLogIn = ()=>{

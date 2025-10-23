@@ -9,6 +9,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import MyProfile from "../Components/MyProfile";
 import UpdateProfilePage from "../Pages/UpdateProfilePage";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -29,7 +30,9 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/game-details/:id',
-                Component: GameDetails
+                element: <PrivateRoute>
+                    <GameDetails></GameDetails>
+                </PrivateRoute>
             }
 
         ]
@@ -55,5 +58,11 @@ export const router = createBrowserRouter([
                 Component: UpdateProfilePage
             }
         ]
+    },
+    {
+        path:'/game-details/:id',
+        element: <PrivateRoute>
+            <GameDetails></GameDetails>
+        </PrivateRoute>
     }
 ])

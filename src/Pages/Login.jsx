@@ -1,12 +1,15 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import Container from '../Components/Container';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
     const { logIn, setUser,googleLogIn } = use(AuthContext)
+    const [emailValue,setEmailValue] = useState('')
+    console.log(emailValue);
     const location = useLocation()
-    console.log(location);
+
+    // console.log(location);
     const navigate = useNavigate()
     const handleLogIn = (e) => {
         e.preventDefault()
@@ -44,12 +47,12 @@ const Login = () => {
                         <h2 className='text-3xl text-center font-bold'>Login</h2>
 
                         <label className="label">Email</label>
-                        <input name='email' type="email" className="input w-full bg-transparent mb-3" placeholder="Email" />
+                        <input value={emailValue} name='email' type="email" className="input w-full bg-transparent mb-3" placeholder="Email" onChange={(e)=>setEmailValue(e.target.value)}/>
 
                         <label className="label">Password</label>
                         <input name='password' type="password" className="input w-full bg-transparent mb-3" placeholder="Password" />
 
-                        <p className='underline cursor-pointer'>Forget Password ?</p>
+                        <Link to='/auth/resetPassword' state={emailValue} className='underline cursor-pointer'>Forget Password ?</Link>
 
                         <button type='submit' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-box justify-center mt-5">Login</button>
 

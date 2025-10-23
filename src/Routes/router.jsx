@@ -10,6 +10,7 @@ import Register from "../Pages/Register";
 import MyProfile from "../Components/MyProfile";
 import UpdateProfilePage from "../Pages/UpdateProfilePage";
 import PrivateRoute from "../Provider/PrivateRoute";
+import ResetPassword from "../Pages/ResetPassword";
 
 export const router = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
             {
                 path: '/auth/updateProfile',
                 Component: UpdateProfilePage
+            },
+            {
+                path: '/auth/resetPassword',
+                Component:ResetPassword
             }
         ]
     },

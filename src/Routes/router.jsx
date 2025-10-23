@@ -7,6 +7,8 @@ import GameDetails from "../Components/GameDetails";
 import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import MyProfile from "../Components/MyProfile";
+import UpdateProfilePage from "../Pages/UpdateProfilePage";
 
 export const router = createBrowserRouter([
     {
@@ -43,6 +45,14 @@ export const router = createBrowserRouter([
             {
                 path: '/auth/register',
                 Component: Register
+            },
+            {
+                path: '/auth/myProfile',
+                Component: MyProfile
+            },
+            {
+                path: '/auth/updateProfile',
+                Component: UpdateProfilePage
             }
         ]
     }

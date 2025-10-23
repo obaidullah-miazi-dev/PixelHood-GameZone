@@ -1,4 +1,4 @@
-import { Mail, Send } from 'lucide-react';
+import {  Send } from 'lucide-react';
 import Container from './Container';
 
 

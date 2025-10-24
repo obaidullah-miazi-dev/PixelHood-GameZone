@@ -29,7 +29,7 @@ const Newsletter = () => {
                         <p className="text-xl text-purple-300 font-semibold max-w-2xl mx-auto leading-relaxed">
                             Get the latest game releases, exclusive offers, and gaming tips delivered straight to your inbox!
                         </p>
-                        <form onSubmit={handleSubmit} className="max-w-md mx-auto flex gap-2">
+                        <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col md:flex-row gap-2">
                             <div className="w-full">
                                 <input
                                     type="email"
@@ -40,7 +40,7 @@ const Newsletter = () => {
                             </div>
                             <button
                                 type="submit"
-                                className="px-6 py-2 bg-gradient-to-br from-[#632EE3] to-[#9F62F2] hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] text-white font-bold rounded-lg flex items-center gap-2 transition"
+                                className="px-6 py-2 bg-gradient-to-br from-[#632EE3] to-[#9F62F2] hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] text-white font-bold rounded-lg flex items-center justify-center  gap-2 transition"
                             >
                                 <Send size={18} /> Subscribe
                             </button>

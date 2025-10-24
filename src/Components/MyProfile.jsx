@@ -13,19 +13,19 @@ const MyProfile = () => {
     return (
         <Container>
             <div className='bg-[#000000b2] mt-38 p-12 rounded-xl'>
-                <h3 className='text-5xl font-bold text-center'><span className='border-b-4 border-b-purple-600'>My Profile</span></h3>
-                <div className='mt-28 flex justify-center gap-8 items-center '>
-                    <div className='border-r-2 border-r-gray-500 pr-5 space-y-2'>
+                <h3 className='md:text-5xl text-3xl font-bold text-center'><span className='border-b-4 border-b-purple-600'>My Profile</span></h3>
+                <div className='mt-28 flex flex-col md:flex-row justify-center gap-8 items-center'>
+                    <div className='md:border-r-2 border-r-gray-500 pr-5 space-y-2'>
                         
                             <img className='w-50 rounded-full mx-auto' src={user?.photoURL} alt={user?.displayName} />
                         
-                        <h2 className='text-center font-bold text-2xl'>{user?.displayName}</h2>
+                        <h2 className='text-center font-bold md:text-2xl text-xl'>{user?.displayName}</h2>
                         <p className='text-center text-purple-400'>Premium User</p>
                     </div>
 
                     <div>
-                        <h2 className='text-3xl font-bold mb-5'>User Details</h2>
-                        <div className='font-semibold text-lg space-y-1'>
+                        <h2 className='text-3xl md:font-bold font-semibold mb-5'>User Details</h2>
+                        <div className='md:font-semibold md:text-lg space-y-1'>
                             <p>Name: {user?.displayName}</p>
                             <p>Email : {user?.email}</p>
                             <p>User Id : {user?.uid}</p>

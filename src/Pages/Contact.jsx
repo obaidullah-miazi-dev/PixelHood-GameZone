@@ -69,7 +69,7 @@ const Contact = () => {
 
 
                 <div className="space-y-6">
-                    <h2 className="text-4xl font-bold text-purple-200 text-center  block px-4 py-2">
+                    <h2 className="md:text-4xl text-xl font-bold text-purple-200 text-center  block px-4 py-2">
                         <span className='border-b-4 border-purple-600 px-5 pb-1'>Send Us a Message</span>
                     </h2>
                     <form className="max-w-3xl mx-auto space-y-6 bg-[#00000050] p-8 rounded-xl shadow-lg">

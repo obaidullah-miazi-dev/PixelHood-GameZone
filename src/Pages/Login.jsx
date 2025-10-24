@@ -19,13 +19,13 @@ const Login = () => {
             .then(res => {
                 alert('LogIn successful')
                 setUser(res.user)
+                navigate(`${location.state?location.state:'/'}`)
                 
             })
             .catch(error => {
-                console.log(error);
+                alert(error.code)
             })
 
-            navigate(`${location.state?location.state:'/'}`)
     }
 
     const handleGoogleLogIn = ()=>{
@@ -33,6 +33,7 @@ const Login = () => {
         .then(res =>{
             setUser(res.user)
             alert('logIn successful')
+            navigate(`${location.state?location.state:'/'}`)
         })
         .catch(error=>{
             console.log(error);
@@ -47,10 +48,10 @@ const Login = () => {
                         <h2 className='text-3xl text-center font-bold'>Login</h2>
 
                         <label className="label">Email</label>
-                        <input value={emailValue} name='email' type="email" className="input w-full bg-transparent mb-3" placeholder="Email" onChange={(e)=>setEmailValue(e.target.value)}/>
+                        <input value={emailValue} name='email' type="email" className="input w-full bg-transparent mb-3" placeholder="Email" onChange={(e)=>setEmailValue(e.target.value)} required/>
 
                         <label className="label">Password</label>
-                        <input name='password' type="password" className="input w-full bg-transparent mb-3" placeholder="Password" />
+                        <input name='password' type="password" className="input w-full bg-transparent mb-3" placeholder="Password" required/>
 
                         <Link to='/auth/resetPassword' state={emailValue} className='underline cursor-pointer'>Forget Password ?</Link>
 

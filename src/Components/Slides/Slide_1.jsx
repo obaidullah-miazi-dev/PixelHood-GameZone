@@ -11,7 +11,7 @@ const Slide_1 = () => {
             scrollTrigger: {
                 trigger: '#box',
                 scroller: 'body',
-                start: 'top 15%',
+                start: 'top 20%',
                 // markers: true,
                 toggleActions: 'play none none reverse',
             },

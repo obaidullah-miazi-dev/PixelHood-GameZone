@@ -19,7 +19,7 @@ const Navbar = () => {
             .catch(error => {
                 console.log(error);
             })
-            navigate('/')
+        navigate('/')
     }
 
 
@@ -83,8 +83,8 @@ const Navbar = () => {
                 </div>
 
                 {open && (
-                    <div className="md:hidden bg-white border-t border-gray-100 shadow-sm">
-                        <ul className="flex flex-col items-center gap-4 py-6 text-gray-700 font-medium">
+                    <div className="md:hidden bg-transparent  shadow-sm">
+                        <ul className="flex flex-col items-center gap-4 py-6 text-gray-700 font-medium text-white">
                             <NavLink to='/'
                                 className={({ isActive }) =>
                                     `${isActive ? "text-[#632EE3] border-b-2 border-[#632EE3]" : ""
@@ -108,9 +108,14 @@ const Navbar = () => {
                             </NavLink>
 
                             {/* button  */}
-                            <div>
-                                <Link to='/auth/login' className="px-5 py-2.5  rounded-full hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold">login</Link>
-                                <Link to='/auth/register' className="px-5 py-2.5  rounded-full hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold">Register</Link>
+                            <div className="md:hidden flex items-center gap-4">
+                                {user ?
+                                    <Link to='/auth/myProfile'>
+                                        <img title={user.displayName} className='w-12 h-12 rounded-full' src={`${user?.photoURL}`} alt="User" />
+                                    </Link>
+                                    :
+                                    <Link to='/auth/login' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">Login</Link>}
+                                {user ? <button onClick={handleLogOut} className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">log out</button> : <Link to='/auth/register' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">Register</Link>}
                             </div>
                         </ul>
                     </div>

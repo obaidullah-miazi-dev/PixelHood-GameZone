@@ -98,6 +98,7 @@ const Register = () => {
     }
     return (
         <Container>
+            <title>Register</title>
             <div className='flex flex-col md:flex-row md:justify-between items-center min-h-screen'>
                 <div className='md:flex-1'></div>
                 <form onSubmit={handleRegister} className='md:flex-1 w-full'>

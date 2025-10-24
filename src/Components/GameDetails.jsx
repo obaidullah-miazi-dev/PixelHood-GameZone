@@ -14,6 +14,7 @@ const GameDetails = () => {
     // console.log(GameDetail);
     return (
         <Container>
+            <title>{title}</title>
             <div className='mt-16 space-y-4 pb-8'>
                 <img className='w-full h-[550px]' src={coverPhoto} alt={title} />
                 <h2 className='text-7xl font-bold text-purple-200'>{title}</h2>

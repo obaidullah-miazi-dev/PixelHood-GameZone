@@ -30,6 +30,8 @@ const Contact = () => {
     }, []);
     return (
         <Container>
+
+            <title>Contact</title>
             <div className="mt-16 py-12 space-y-12">
 
                 <div className="relative overflow-hidden rounded-xl">

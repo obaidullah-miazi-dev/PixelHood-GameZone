@@ -38,6 +38,7 @@ const About = () => {
     }, []);
     return (
         <Container>
+            <title>About</title>
             <div className="mt-6 py-12 space-y-12">
 
                 <div className="relative overflow-hidden rounded-xl">

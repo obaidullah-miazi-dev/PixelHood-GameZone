@@ -8,6 +8,7 @@ const Home = () => {
     
     return (
         <div>
+            <title>Pixel Hood -Home</title>
             <Banner></Banner>
             <AllGames></AllGames>
             <PopularGames></PopularGames>

@@ -12,6 +12,7 @@ const MyProfile = () => {
     // console.log(user);
     return (
         <Container>
+            <title>My Profile</title>
             <div className='bg-[#000000b2] mt-38 p-12 rounded-xl'>
                 <h3 className='md:text-5xl text-3xl font-bold text-center'><span className='border-b-4 border-b-purple-600'>My Profile</span></h3>
                 <div className='mt-28 flex flex-col md:flex-row justify-center gap-8 items-center'>

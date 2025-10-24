@@ -43,6 +43,7 @@ const UpdateProfilePage = () => {
     }
     return (
         <Container>
+            <title>Update Profile</title>
             <div className='flex flex-col md:flex-row md:justify-between items-center min-h-screen w-full'>
                 <div className='md:flex-1'></div>
                 <form onSubmit={handleUpdateProfile} className='md:flex-1 w-full mx-auto'>

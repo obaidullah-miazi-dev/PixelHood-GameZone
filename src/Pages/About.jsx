@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
-import {  Users, Gamepad2, DownloadCloud } from 'lucide-react';
+import { Users, Gamepad2, DownloadCloud } from 'lucide-react';
 
-// Import images - you'll need to add these to your assets folder
+// imported images..
 import heroBanner from '../assets/about-hero-banner.jpg';
 import communityImage from '../assets/community-gamers.jpg';
 import gameplayImage from '../assets/gameplay-scene.jpeg';
@@ -10,20 +10,44 @@ import platformImage from '../assets/platform-screenshot.jpg';
 import teamImage from '../assets/team-collaboration.jpeg';
 import statsBackground from '../assets/stats-bg.jpg';
 import Container from '../Components/Container';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+    const aboutRef = useRef(null);
+
+    useEffect(() => {
+        gsap.fromTo(
+            aboutRef.current,
+            { opacity: 0, y: 100 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                scrollTrigger: {
+                    trigger: aboutRef.current,
+                    start: "top 80%",
+                    end: "bottom 60%",
+                    markers: true,
+                    toggleActions: "play none none reverse",
+                },
+            }
+        );
+    }, []);
     return (
         <Container>
             <div className="mt-6 py-12 space-y-12">
-                
+
                 <div className="relative overflow-hidden rounded-xl">
-                    <img 
-                        src={heroBanner} 
-                        alt="PixelHood Gaming World" 
+                    <img
+                        src={heroBanner}
+                        alt="PixelHood Gaming World"
                         className="w-full h-[500px] md:h-[600px] object-cover"
                     />
                     <div className="absolute inset-0 bg-[#000000b7] bg-opacity-50 flex items-center justify-center">
-                        <div className="text-center space-y-6 px-4">
+                        <div ref={aboutRef} className="text-center space-y-6 px-4">
                             <h1 className="text-5xl md:text-7xl font-bold text-purple-200 drop-shadow-lg">
                                 Welcome to PixelHood
                             </h1>
@@ -34,7 +58,7 @@ const About = () => {
                     </div>
                 </div>
 
-                
+
                 <div className="bg-[#000000b2] p-8 rounded-xl space-y-6">
                     <h2 className="text-4xl font-bold text-purple-200 border-b-4 border-purple-600 inline-block px-4 py-2">
                         Our Mission
@@ -46,25 +70,25 @@ const About = () => {
                             </p>
                         </div>
                         <div className="relative">
-                            <img 
-                                src={teamImage} 
-                                alt="Our Team at Work" 
+                            <img
+                                src={teamImage}
+                                alt="Our Team at Work"
                                 className="rounded-lg shadow-lg w-full h-64 object-cover"
                             />
                         </div>
                     </div>
                 </div>
 
-                
+
                 <div className="space-y-6">
                     <h2 className="text-4xl font-bold text-purple-200 border-b-4 border-purple-600 inline-block px-4 py-2">
                         Why Choose PixelHood?
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="group relative overflow-hidden rounded-lg">
-                            <img 
-                                src={gameplayImage} 
-                                alt="Curated Games" 
+                            <img
+                                src={gameplayImage}
+                                alt="Curated Games"
                                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -79,9 +103,9 @@ const About = () => {
                         </div>
 
                         <div className="group relative overflow-hidden rounded-lg">
-                            <img 
-                                src={communityImage} 
-                                alt="Community" 
+                            <img
+                                src={communityImage}
+                                alt="Community"
                                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -96,9 +120,9 @@ const About = () => {
                         </div>
 
                         <div className="group relative overflow-hidden rounded-lg">
-                            <img 
-                                src={platformImage} 
-                                alt="Platform Experience" 
+                            <img
+                                src={platformImage}
+                                alt="Platform Experience"
                                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -114,11 +138,11 @@ const About = () => {
                     </div>
                 </div>
 
-                
+
                 <div className="relative overflow-hidden rounded-xl">
-                    <img 
-                        src={statsBackground} 
-                        alt="Gaming Stats" 
+                    <img
+                        src={statsBackground}
+                        alt="Gaming Stats"
                         className="w-full h-[400px] object-cover"
                     />
                     <div className="absolute inset-0 bg-[#000000b9]  flex items-center justify-center">
@@ -143,19 +167,19 @@ const About = () => {
                     </div>
                 </div>
 
-                
+
                 <div className="space-y-12">
                     <h2 className="text-4xl font-bold text-purple-200 text-center border-b-4 border-purple-600 inline-block px-4 py-2">
                         Our Journey
                     </h2>
                     <div className="relative">
                         <div className="space-y-12">
-                            
+
                             <div className="flex items-center justify-between md:flex-row flex-col gap-6">
                                 <div className="md:w-1/3">
-                                    <img 
-                                        src={gameplayImage} 
-                                        alt="Platform Launch" 
+                                    <img
+                                        src={gameplayImage}
+                                        alt="Platform Launch"
                                         className="w-full h-48 object-cover rounded-lg shadow-lg"
                                     />
                                 </div>
@@ -172,12 +196,12 @@ const About = () => {
                                 </div>
                             </div>
 
-                            
+
                             <div className="flex items-center justify-between md:flex-row-reverse flex-col gap-6">
                                 <div className="md:w-1/3">
-                                    <img 
-                                        src={communityImage} 
-                                        alt="Community Growth" 
+                                    <img
+                                        src={communityImage}
+                                        alt="Community Growth"
                                         className="w-full h-48 object-cover rounded-lg shadow-lg"
                                     />
                                 </div>
@@ -194,12 +218,12 @@ const About = () => {
                                 </div>
                             </div>
 
-                            
+
                             <div className="flex items-center justify-between md:flex-row flex-col gap-6">
                                 <div className="md:w-1/3">
-                                    <img 
-                                        src={platformImage} 
-                                        alt="Future Vision" 
+                                    <img
+                                        src={platformImage}
+                                        alt="Future Vision"
                                         className="w-full h-48 object-cover rounded-lg shadow-lg"
                                     />
                                 </div>
@@ -219,11 +243,11 @@ const About = () => {
                     </div>
                 </div>
 
-                
+
                 <div className="relative overflow-hidden rounded-xl mt-28">
-                    <img 
-                        src={heroBanner} 
-                        alt="Join PixelHood" 
+                    <img
+                        src={heroBanner}
+                        alt="Join PixelHood"
                         className="w-full h-[400px] object-cover"
                     />
                     <div className="absolute inset-0 bg-[#000000b2] flex items-center justify-center pr-8">

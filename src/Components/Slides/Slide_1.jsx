@@ -1,12 +1,37 @@
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import React from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger)
 const Slide_1 = () => {
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#box',
+                scroller: 'body',
+                start: 'top 15%',
+                // markers: true,
+                toggleActions: 'play none none reverse',
+            },
+        });
+
+        tl.from('#box .animation', {
+            y: 100, 
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.4, 
+        });
+    }, []);
+
+    
     return (
-        <div className='w-full flex flex-col-reverse md:flex-row justify-between items-center mt-12 bg-[#00000036] p-10 px-16 gap-5'>
+        <div id='box' className='w-full flex flex-col-reverse md:flex-row justify-between items-center mt-12 bg-[#00000036] p-10 px-16 gap-5'>
             <div className='flex-1 w-full space-y-4'>
-                <span className='bg-red-500 text-xs font-semibold md:font-bold md:text-lg'>MARVEL</span>
-                <h2 className='md:text-7xl text-xl font-bold'>Spider-Man</h2>
-                <p className='px-0 md:pr-40'>
+                <span className='bg-red-500 text-xs font-semibold md:font-bold md:text-lg animation'>MARVEL</span>
+                <h2 className='md:text-7xl text-xl font-bold animation'>Spider-Man</h2>
+                <p className='px-0 md:pr-40 animation'>
                     Marvel's Spider-Man lets players swing through an open-world New York City as Peter Parker battles villains like Doc Ock and Mister Negative. Combining web-slinging traversal, combo-based combat, and heartfelt storytelling, it's a love letter to the Spider-Man comics with seamless urban exploration.
                 </p>
             </div>

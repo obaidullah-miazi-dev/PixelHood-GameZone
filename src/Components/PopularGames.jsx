@@ -6,7 +6,6 @@ import GameCard from './GameCard';
 const PopularGames = () => {
     const { gameData } = useData()
     const highRatedGames = gameData.sort((a, b) => b.ratings - a.ratings).slice(0, 3)
-    console.log(highRatedGames);
     return (
         <Container>
             <div className='mt-16'>

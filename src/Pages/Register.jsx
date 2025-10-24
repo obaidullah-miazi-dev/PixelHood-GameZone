@@ -1,6 +1,6 @@
 import React, { use } from 'react';
 import Container from '../Components/Container';
-import { Link, useLocation, useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Register = () => {

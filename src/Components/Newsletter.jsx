@@ -1,24 +1,24 @@
-import {  Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 import Container from './Container';
 
 
 
 const Newsletter = () => {
-    
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
         alert('Thank you for subscribing!')
-       
+
     };
 
 
     return (
         <Container>
-            <div className="relative overflow-hidden rounded-xl my-18 h-96">
-                <img 
-                    src="https://wstatic-prod-boc.krafton.com/common/content/news/20251015/dy7W1yxy_thumb.jpg" 
-                    alt="Newsletter Background" 
+            <div className=" boxd relative overflow-hidden rounded-xl my-18 h-96">
+                <img
+                    src="https://wstatic-prod-boc.krafton.com/common/content/news/20251015/dy7W1yxy_thumb.jpg"
+                    alt="Newsletter Background"
                     className="w-full h-96 object-cover opacity-50"
                 />
                 <div className="absolute inset-0 bg-[#0000009a]  flex items-center justify-center">
@@ -45,7 +45,7 @@ const Newsletter = () => {
                                 <Send size={18} /> Subscribe
                             </button>
                         </form>
-    
+
                     </div>
                 </div>
             </div>

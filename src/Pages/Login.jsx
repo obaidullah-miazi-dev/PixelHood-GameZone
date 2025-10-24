@@ -5,7 +5,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Login = () => {
-    const { logIn, setUser, googleLogIn } = use(AuthContext)
+    const { logIn, setUser, googleLogIn,setLoading } = use(AuthContext)
     const [emailValue, setEmailValue] = useState('')
     // console.log(emailValue);
     const location = useLocation()
@@ -39,7 +39,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-            })
+            }).finally(()=>{setLoading(false)})
 
     }
 

@@ -11,10 +11,12 @@ import MyProfile from "../Components/MyProfile";
 import UpdateProfilePage from "../Pages/UpdateProfilePage";
 import PrivateRoute from "../Provider/PrivateRoute";
 import ResetPassword from "../Pages/ResetPassword";
+import ErrorPage from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
     {
         path: '/',
+        errorElement:<ErrorPage></ErrorPage>,
         Component: MainLayout,
         children:[
             {
@@ -40,6 +42,7 @@ export const router = createBrowserRouter([
     },
     {
         path: '/auth',
+        errorElement: <ErrorPage></ErrorPage>,
         Component: AuthLayout,
         children:[
             {
@@ -66,6 +69,7 @@ export const router = createBrowserRouter([
     },
     {
         path:'/game-details/:id',
+        errorElement: <ErrorPage></ErrorPage>,
         element: <PrivateRoute>
             <GameDetails></GameDetails>
         </PrivateRoute>

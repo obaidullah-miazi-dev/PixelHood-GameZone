@@ -5,7 +5,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Register = () => {
-    const { createUser, setUser, updateUser, googleLogIn } = use(AuthContext)
+    const { createUser, setUser, updateUser, googleLogIn,setLoading } = use(AuthContext)
     const navigate = useNavigate()
     // console.log(location);
     const handleRegister = (e) => {
@@ -43,6 +43,7 @@ const Register = () => {
                             showConfirmButton: false,
                             timer: 1500
                         });
+
                     })
                     .catch(error => {
                         const err = error.code
@@ -58,15 +59,15 @@ const Register = () => {
             })
             .catch(error => {
                 const err = error.code
-                 Swal.fire({
+                Swal.fire({
                     position: "top-end",
                     icon: "error",
                     title: `${err}`,
                     showConfirmButton: false,
                     timer: 1500
                 });
-            })
-
+            }).finally(()=>{navigate('/'),setLoading(false)})
+        
 
 
     }
@@ -75,7 +76,7 @@ const Register = () => {
         googleLogIn()
             .then(res => {
                 setUser(res.user)
-                 Swal.fire({
+                Swal.fire({
                     position: "top-end",
                     icon: "success",
                     title: "Login successful! Let’s explore some awesome games",
@@ -85,7 +86,7 @@ const Register = () => {
             })
             .catch(error => {
                 const err = error.code
-                 Swal.fire({
+                Swal.fire({
                     position: "top-end",
                     icon: "error",
                     title: `${err}`,

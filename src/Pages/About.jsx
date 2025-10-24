@@ -30,7 +30,7 @@ const About = () => {
                     trigger: aboutRef.current,
                     start: "top 80%",
                     end: "bottom 60%",
-                    markers: true,
+                    // markers: true,
                     toggleActions: "play none none reverse",
                 },
             }

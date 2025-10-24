@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Send } from 'lucide-react';
 import contactBanner from '../assets/contact-banner.jpg';
 import Container from '../Components/Container';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+    const contactRef = useRef(null);
+
+    useEffect(() => {
+        gsap.fromTo(
+            contactRef.current,
+            { opacity: 0, y: 100 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                scrollTrigger: {
+                    trigger: contactRef.current,
+                    start: "top 80%",
+                    end: "bottom 60%",
+                    // markers: true,
+                    toggleActions: "play none none reverse",
+                },
+            }
+        );
+    }, []);
     return (
         <Container>
             <div className="mt-16 py-12 space-y-12">
@@ -15,7 +39,7 @@ const Contact = () => {
                         className="w-full h-[400px] object-cover"
                     />
                     <div className="absolute inset-0 bg-[#000000e0]  flex items-center justify-center">
-                        <div className="text-center space-y-6 px-4">
+                        <div ref={contactRef} className="text-center space-y-6 px-4">
                             <h1 className="text-5xl md:text-7xl font-bold text-purple-200 drop-shadow-lg">
                                 Get in Touch
                             </h1>
@@ -119,7 +143,7 @@ const Contact = () => {
                     </form>
                 </div>
 
-                
+
                 <div className="text-center space-y-4 bg-[#000000b2] p-6 rounded-xl">
                     <h2 className="text-3xl font-bold text-purple-200">Support Hours</h2>
                     <p className="text-purple-300 font-semibold">

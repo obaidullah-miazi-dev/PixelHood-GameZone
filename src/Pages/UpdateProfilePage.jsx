@@ -2,29 +2,44 @@ import React, { use } from 'react';
 import Container from '../Components/Container';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const UpdateProfilePage = () => {
-    const {updateUser,setUser,user} = use(AuthContext)
+    const { updateUser, setUser, user } = use(AuthContext)
     const navigate = useNavigate()
-    const handleUpdateProfile = (e)=>{
+    const handleUpdateProfile = (e) => {
         // e.preventDefault()
         const displayName = e.target.name.value
         const photoURL = e.target.photo.value
 
         updateUser({
-         displayName,photoURL   
+            displayName, photoURL
         })
-        .then(()=>{
-            setUser({...user,displayName,photoURL})
-        })
-        .catch(error=>{
-            console.log(error);
-            setUser(user)
-        })
+            .then(() => {
+                setUser({ ...user, displayName, photoURL })
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Info Updated",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+            .catch(error => {
+                const err = error.code
+                Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: { err },
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                setUser(user)
+            })
 
         navigate('/auth/myProfile')
 
-        console.log('clicked',displayName);
+        // console.log('clicked',displayName);
     }
     return (
         <Container>
@@ -40,9 +55,9 @@ const UpdateProfilePage = () => {
                         <label className="label">Photo URL</label>
                         <input name='photo' type="text" className="input w-full bg-transparent mb-3" placeholder="Photo URL" />
 
-                        <button  className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-box justify-center mt-5">Update</button>
+                        <button className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-box justify-center mt-5">Update</button>
 
-                        
+
 
                         <p className='mt-3 font-semibold'>Don't Want to Update Now? <Link to='/auth/myProfile' className='font-semibold text-purple-500 hover:border-b hover:border-b-purple-500'>Go Back</Link></p>
                     </fieldset>

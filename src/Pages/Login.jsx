@@ -2,11 +2,12 @@ import React, { use, useState } from 'react';
 import Container from '../Components/Container';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
-    const { logIn, setUser,googleLogIn } = use(AuthContext)
-    const [emailValue,setEmailValue] = useState('')
-    console.log(emailValue);
+    const { logIn, setUser, googleLogIn } = use(AuthContext)
+    const [emailValue, setEmailValue] = useState('')
+    // console.log(emailValue);
     const location = useLocation()
 
     // console.log(location);
@@ -17,27 +18,53 @@ const Login = () => {
         const password = e.target.password.value
         logIn(email, password)
             .then(res => {
-                alert('LogIn successful')
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Login successful! Let’s explore some awesome games",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 setUser(res.user)
-                navigate(`${location.state?location.state:'/'}`)
-                
+                navigate(`${location.state ? location.state : '/'}`)
+
             })
             .catch(error => {
-                alert(error.code)
+                const err = error.code
+                 Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: {err},
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
 
     }
 
-    const handleGoogleLogIn = ()=>{
+    const handleGoogleLogIn = () => {
         googleLogIn()
-        .then(res =>{
-            setUser(res.user)
-            alert('logIn successful')
-            navigate(`${location.state?location.state:'/'}`)
-        })
-        .catch(error=>{
-            console.log(error);
-        })
+            .then(res => {
+                setUser(res.user)
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Login successful! Let’s explore some awesome games",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate(`${location.state ? location.state : '/'}`)
+            })
+            .catch(error => {
+                const err = error.code
+                 Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: {err},
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
     }
     return (
         <Container>
@@ -48,10 +75,10 @@ const Login = () => {
                         <h2 className='text-3xl text-center font-bold'>Login</h2>
 
                         <label className="label">Email</label>
-                        <input value={emailValue} name='email' type="email" className="input w-full bg-transparent mb-3" placeholder="Email" onChange={(e)=>setEmailValue(e.target.value)} required/>
+                        <input value={emailValue} name='email' type="email" className="input w-full bg-transparent mb-3" placeholder="Email" onChange={(e) => setEmailValue(e.target.value)} required />
 
                         <label className="label">Password</label>
-                        <input name='password' type="password" className="input w-full bg-transparent mb-3" placeholder="Password" required/>
+                        <input name='password' type="password" className="input w-full bg-transparent mb-3" placeholder="Password" required />
 
                         <Link to='/auth/resetPassword' state={emailValue} className='underline cursor-pointer'>Forget Password ?</Link>
 

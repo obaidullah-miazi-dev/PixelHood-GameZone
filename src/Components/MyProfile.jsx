@@ -9,7 +9,7 @@ const MyProfile = () => {
     if (loading) {
         return <Loading></Loading>
     }
-    console.log(user);
+    // console.log(user);
     return (
         <Container>
             <div className='bg-[#000000b2] mt-38 p-12 rounded-xl'>

@@ -1,25 +1,39 @@
 import React, { useContext, useState } from 'react';
 import Container from '../Components/Container';
-import { Link, useLocation} from 'react-router';
+import { Link, useLocation } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const ResetPassword = () => {
-    const {resetPassword} = useContext(AuthContext)
+    const { resetPassword } = useContext(AuthContext)
     const location = useLocation()
-    const [email,setEmail] = useState(location?.state)
+    const [email, setEmail] = useState(location?.state)
 
     // console.log(email);
     // console.log(resetPassword);
-    const handleResetPassword = (e)=>{
+    const handleResetPassword = (e) => {
         e.preventDefault()
         resetPassword(email)
-        .then(() =>{
-            alert('Password reset email sent!')
-            window.location.href = "https://mail.google.com";
-        })
-        .catch(error=>{
-            console.log(error);
-        })
+            .then(() => {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Password reset email sent!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                window.location.href = "https://mail.google.com";
+            })
+            .catch(error => {
+                const err = error.code
+                 Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: {err},
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
     }
     return (
         <Container>
@@ -30,12 +44,12 @@ const ResetPassword = () => {
                         <h2 className='text-3xl text-center font-bold'>Password Reset</h2>
 
                         <label className="label">Email</label>
-                        <input name='email' type="email" value={email} className="input w-full bg-transparent mb-3" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} />
+                        <input name='email' type="email" value={email} className="input w-full bg-transparent mb-3" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
 
-                    
+
                         <button type='submit' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-box justify-center mt-5">Reset Password</button>
 
-                        
+
 
                         <p className='mt-3 font-semibold'>Go Back to <Link to='/auth/login' className='font-semibold text-purple-500 hover:border-b hover:border-b-purple-500'>Login</Link></p>
                     </fieldset>

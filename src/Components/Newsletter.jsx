@@ -1,5 +1,6 @@
 import { Send } from 'lucide-react';
 import Container from './Container';
+import Swal from 'sweetalert2';
 
 
 
@@ -8,7 +9,13 @@ const Newsletter = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert('Thank you for subscribing!')
+         Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Thanks for Subscribing",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
 
     };
 

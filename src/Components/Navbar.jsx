@@ -4,6 +4,7 @@ import logo from '../assets/PixelHood-logo.png'
 import { Link, NavLink, useNavigate } from 'react-router';
 import { Menu, X } from 'lucide-react';
 import { AuthContext } from '../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const Navbar = () => {
@@ -14,10 +15,23 @@ const Navbar = () => {
     const handleLogOut = () => {
         logOut()
             .then(() => {
-                alert('log Out successful')
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Logged out successfully! Hope to see you again",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
             .catch(error => {
-                console.log(error);
+                const err = error.code
+                 Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: {err},
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
         navigate('/')
     }

@@ -2,11 +2,12 @@ import React, { use } from 'react';
 import Container from '../Components/Container';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Register = () => {
-    const { createUser, setUser, updateUser,googleLogIn } = use(AuthContext)
+    const { createUser, setUser, updateUser, googleLogIn } = use(AuthContext)
     const navigate = useNavigate()
-    console.log(location);
+    // console.log(location);
     const handleRegister = (e) => {
         e.preventDefault()
         // console.log(e.target);
@@ -16,9 +17,16 @@ const Register = () => {
         const password = e.target.password.value
         const passValidationRegEx = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
-        if(!passValidationRegEx.test(password)){
-            alert('Password must contain at least 1 uppercase, 1 lowercase and 6 characters')
-            return 
+        if (!passValidationRegEx.test(password)) {
+
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "Password must contain at least 1 uppercase, 1 lowercase and 6 characters",
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return
         }
         createUser(email, password)
             .then(res => {
@@ -28,17 +36,38 @@ const Register = () => {
                 })
                     .then(() => {
                         setUser({ ...user, displayName, photoURL })
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: "Account created successfully! Let’s start your gaming journey",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
                     })
                     .catch(error => {
-                        console.log(error);
+                        const err = error.code
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "error",
+                            title: { err },
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
                         setUser(user)
                     })
             })
             .catch(error => {
-                console.log(error);
+                const err = error.code
+                 Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: {err},
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
 
-        
+
 
     }
 
@@ -46,13 +75,26 @@ const Register = () => {
         googleLogIn()
             .then(res => {
                 setUser(res.user)
-                alert('logIn successful')
+                 Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Login successful! Let’s explore some awesome games",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
             .catch(error => {
-                console.log(error);
+                const err = error.code
+                 Swal.fire({
+                    position: "top-end",
+                    icon: "error",
+                    title: {err},
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             })
 
-            navigate('/')
+        navigate('/')
     }
     return (
         <Container>
@@ -63,16 +105,16 @@ const Register = () => {
                         <h2 className='text-3xl text-center font-bold'>Register</h2>
 
                         <label className="label">Name</label>
-                        <input name='name' type="text" className="input w-full bg-transparent mb-3  " placeholder="Full Name" required/>
+                        <input name='name' type="text" className="input w-full bg-transparent mb-3  " placeholder="Full Name" required />
 
                         <label className="label">Photo URL</label>
-                        <input name='photo' type="text" className="input w-full bg-transparent mb-3  " placeholder="Photo Url" required/>
+                        <input name='photo' type="text" className="input w-full bg-transparent mb-3  " placeholder="Photo Url" required />
 
                         <label className="label">Email</label>
-                        <input name='email' type="email" className="input w-full bg-transparent mb-3  " placeholder="Email" required/>
+                        <input name='email' type="email" className="input w-full bg-transparent mb-3  " placeholder="Email" required />
 
                         <label className="label">Password</label>
-                        <input name='password' type="password" className="input w-full bg-transparent mb-3  " placeholder="Password" required/>
+                        <input name='password' type="password" className="input w-full bg-transparent mb-3  " placeholder="Password" required />
 
 
                         <button type='submit' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-box justify-center mt-5">Register</button>

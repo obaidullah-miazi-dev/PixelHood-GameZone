@@ -31,10 +31,11 @@ const Login = () => {
             })
             .catch(error => {
                 const err = error.code
+                console.log(err);
                  Swal.fire({
                     position: "top-end",
                     icon: "error",
-                    title: {err},
+                    title: `${err}`,
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -60,7 +61,7 @@ const Login = () => {
                  Swal.fire({
                     position: "top-end",
                     icon: "error",
-                    title: {err},
+                    title: `${err}`,
                     showConfirmButton: false,
                     timer: 1500
                 });

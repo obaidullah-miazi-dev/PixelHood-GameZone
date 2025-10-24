@@ -29,7 +29,7 @@ const ResetPassword = () => {
                  Swal.fire({
                     position: "top-end",
                     icon: "error",
-                    title: {err},
+                    title: `${err}`,
                     showConfirmButton: false,
                     timer: 1500
                 });

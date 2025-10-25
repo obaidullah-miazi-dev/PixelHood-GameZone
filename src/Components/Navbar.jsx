@@ -25,7 +25,7 @@ const Navbar = () => {
             })
             .catch(error => {
                 const err = error.code
-                 Swal.fire({
+                Swal.fire({
                     position: "top-end",
                     icon: "error",
                     title: `${err}`,
@@ -51,42 +51,45 @@ const Navbar = () => {
                         </NavLink>
                     </div>
 
-                    <ul className="hidden md:flex items-center gap-8 text-white font-medium">
-                        <NavLink to='/'
-                            className={({ isActive }) =>
-                                `${isActive ? "border-b-2 border-[#632EE3]" : ""
-                                }`
-                            }>
-                            <li className="hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">Home</li>
-                        </NavLink>
-                        <NavLink to='/about'
-                            className={({ isActive }) =>
-                                `${isActive ? "border-b-2 border-[#632EE3]" : ""
-                                }`
-                            }>
-                            <li className="hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">About Us</li>
-                        </NavLink>
-                        <NavLink to='/contact'
-                            className={({ isActive }) =>
-                                `${isActive ? "border-b-2 border-[#632EE3]" : ""
-                                }`
-                            }>
-                            <li className="hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">Contact</li>
-                        </NavLink>
+                    <div className='hidden md:flex gap-5'>
+                        <ul className="hidden md:flex items-center gap-8 text-white font-medium">
+                            <NavLink to='/'
+                                className={({ isActive }) =>
+                                    `${isActive ? "border-b-2 border-[#632EE3]" : ""
+                                    }`
+                                }>
+                                <li className="hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">Home</li>
+                            </NavLink>
+                            <NavLink to='/about'
+                                className={({ isActive }) =>
+                                    `${isActive ? "border-b-2 border-[#632EE3]" : ""
+                                    }`
+                                }>
+                                <li className="hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">About Us</li>
+                            </NavLink>
+                            <NavLink to='/contact'
+                                className={({ isActive }) =>
+                                    `${isActive ? "border-b-2 border-[#632EE3]" : ""
+                                    }`
+                                }>
+                                <li className="hover:border-b-2 hover:border-[#632EE3] transition cursor-pointer font-semibold text-lg">Contact</li>
+                            </NavLink>
 
 
-                    </ul>
-
-                    {/* button  */}
-                    <div className="hidden md:flex items-center gap-4">
-                        {user ?
-                            <Link to='/auth/myProfile'>
-                                <img title={user.displayName} className='w-12 h-12 rounded-full' src={`${user?.photoURL}`} alt="User" />
-                            </Link>
-                            :
-                            <Link to='/auth/login' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">Login</Link>}
-                        {user ? <button onClick={handleLogOut} className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">log out</button> : <Link to='/auth/register' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">Register</Link>}
+                        </ul>
+                        {/* button  */}
+                        <div className="hidden md:flex items-center gap-4">
+                            {user ?
+                                <Link to='/auth/myProfile'>
+                                    <img title={user.displayName} className='w-12 h-12 rounded-full' src={`${user?.photoURL}`} alt="User" />
+                                </Link>
+                                :
+                                <Link to='/auth/login' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">Login</Link>}
+                            {user ? <button onClick={handleLogOut} className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">log out</button> : <Link to='/auth/register' className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-full">Register</Link>}
+                        </div>
                     </div>
+
+
 
                     <button
                         onClick={() => setOpen(!open)}

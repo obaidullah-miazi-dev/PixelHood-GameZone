@@ -51,10 +51,10 @@ const UpdateProfilePage = () => {
                         <h2 className='text-3xl text-center font-bold'>Update Your Profile</h2>
 
                         <label className="label">Name</label>
-                        <input name='name' type="text" className="input w-full bg-transparent mb-3" placeholder="Name" />
+                        <input name='name' type="text" className="input w-full bg-transparent mb-3" placeholder="Name" required/>
 
                         <label className="label">Photo URL</label>
-                        <input name='photo' type="text" className="input w-full bg-transparent mb-3" placeholder="Photo URL" />
+                        <input name='photo' type="text" className="input w-full bg-transparent mb-3" placeholder="Photo URL" required/>
 
                         <button className="px-5 py-2.5 hover:bg-gradient-to-br hover:from-[#5107ff] hover:to-[#8026ff] cursor-pointer bg-gradient-to-br from-[#632EE3] to-[#9F62F2] transition flex items-center gap-2 text-white font-semibold rounded-box justify-center mt-5">Update</button>
 

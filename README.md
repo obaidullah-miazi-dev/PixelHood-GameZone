@@ -64,6 +64,7 @@ PixelHood GameZone is a modern and responsive web application where users can ex
 }
 ```
 
+```bash
 🛠 Installation & Setup
 1️⃣ Clone the Repository
 git clone https://github.com/obaidullah-miazi-dev/PixelHood-GameZone.git
@@ -85,6 +86,8 @@ VITE_APPID=your_app_id
 
 4️⃣ Run Locally
 npm run dev
+
+```
 
 **Home page**
 ![Screenshot](./src/assets/pixelhood-gamezone.web.app_.png)
@@ -116,16 +119,16 @@ Password reset with Gmail redirect
 
 Reusable component architecture
 
-👤 Author
+👤 Author  
 
-👨‍💻 Obaidullah Miazi
-Student & Web Development Enthusiast
-📍 Bangladesh
-🔗 LinkedIn: www.linkedin.com/in/obaidullah-miazi
+👨‍💻 Obaidullah Miazi  
+Student & Web Development Enthusiast  
+📍 Bangladesh  
+🔗 LinkedIn: www.linkedin.com/in/obaidullah-miazi  
 
-📧 Email: obaidullahmiazi.dev@gmail.com
+📧 Email: obaidullahmiazi.dev@gmail.com  
 
-🏆 Acknowledgement
+🏆 Acknowledgement 
 
 Thanks to Programming Hero for providing the project structure and guidelines.
 

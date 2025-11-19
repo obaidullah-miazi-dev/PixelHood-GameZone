@@ -1,5 +1,5 @@
-🎮 PixelHood GameZone
-🧩 Overview
+## 🎮 PixelHood GameZone  
+🧩 Overview  
 
 PixelHood GameZone is a modern and responsive web application where users can explore, view details, and download various popular games. It features Firebase authentication, protected routes, and dynamic content rendering powered by JSON data. This project was built as part of a web development assignment to demonstrate authentication, routing, and UI design skills.
 

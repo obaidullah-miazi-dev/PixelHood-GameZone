@@ -1,44 +1,57 @@
-🎮 PixelHood 
-
-
+🎮 PixelHood GameZone
 🧩 Overview
 
-PixelHood GameZone is a modern and responsive web application where users can explore, view details, and download various popular games.
-It features Firebase authentication, protected routes, and dynamic content rendering powered by JSON data.
-This project was built as part of a web development assignment to demonstrate authentication, routing, and UI design skills.
+PixelHood GameZone is a modern and responsive web application where users can explore, view details, and download various popular games. It features Firebase authentication, protected routes, and dynamic content rendering powered by JSON data. This project was built as part of a web development assignment to demonstrate authentication, routing, and UI design skills.
 
-Live Site: https://pixelhood-gamezone.web.app/  
-
+🔗 Live Site: https://pixelhood-gamezone.web.app/
 
 🚀 Features
 
-✅ Single Layout Structure – Common header and footer across all pages.
-✅ Responsive Navbar – Dynamic links that change based on login state.
-✅ Firebase Authentication – Email-password & Google-based login/register system.
-✅ Protected Routes – Game Details & My Profile pages accessible only to logged-in users.
-✅ Password Validation – Includes uppercase, lowercase, and minimum length rules.
-✅ Banner Slider – Interactive banner showcasing featured games.
-✅ Popular Games Section – Sorted by rating, displayed using a responsive card layout.
-✅ Newsletter Subscription – Users can subscribe to updates from the homepage.
-✅ Game Details Page – Displays full information about each game dynamically.
-✅ Forget Password – Fully functional password reset via email.
-✅ Profile Update – Users can update their name and photo URL.
-✅ 404 Page – Custom Not Found page for invalid routes.
-✅ Dynamic Titles – Browser tab title updates with each page.
-✅ Animation Library – Implemented Framer Motion & GSAP for smooth transitions.
-✅ Additional Route – Includes two extra themed page related to the website’s concept.
+✅ Single layout (common header & footer)
 
-🧠 Tech Stack
-Category	Technologies
-Frontend	React, React Router, Tailwind CSS
-Animation	Framer Motion & GSAP
-Authentication	Firebase Authentication
-Hosting	Firebase Hosting
-Data Source	Local JSON data
-Deployment	Firebase CLI  
+✅ Responsive navbar (login state )
+
+✅ Firebase Email/Password + Google authentication
+
+✅ Protected routes (Game Details & My Profile)
+
+✅ Password validation rules
+
+✅ Banner slider
+
+✅ Popular games section (sorted by rating)
+
+✅ Newsletter subscription
+
+✅ Dynamic game details page
+
+✅ Forget password (email reset)
+
+✅ Profile update (name & photo URL)
+
+✅ Custom 404 page
+
+✅ Dynamic page titles
+
+✅ Smooth animations (Framer Motion + GSAP)
+
+✅ Extra two themed pages
+
+## Tech Stack
+
+| Category       | Technologies                      |
+| -------------- | --------------------------------- |
+| Frontend       | React, React Router, Tailwind CSS |
+| Animation      | Framer Motion, GSAP               |
+| Authentication | Firebase Authentication           |
+| Hosting        | Firebase Hosting                  |
+| Data Source    | Local JSON                        |
+| Deployment     | Firebase CLI                      |
+
 
 
 🧾 JSON Data Structure
+```bash
 {
   "id": "1",
   "title": "Player Unknowns Battle Ground: PUBG",
@@ -49,24 +62,19 @@ Deployment	Firebase CLI
   "ratings": "4.5",
   "developer": "Krafton"
 }
+```
 
-🛠️ Installation & Setup
-Clone the Repository
+🛠 Installation & Setup
+1️⃣ Clone the Repository
 git clone https://github.com/obaidullah-miazi-dev/PixelHood-GameZone.git
 cd PixelHood-GameZone
 
-Install Dependencies
+2️⃣ Install Dependencies
 npm install
 
-Create a Firebase Project
+3️⃣ Setup Firebase
 
-Go to Firebase Console
-
-Create a new project
-
-Enable Email/Password and Google authentication
-
-Copy your Firebase config and add it to a .env.local file:
+Create .env.local:
 
 VITE_APIKEY=your_api_key
 VITE_AUTHDOMAIN=your_auth_domain
@@ -75,62 +83,52 @@ VITE_STORAGEBUCKET=your_storage_bucket
 VITE_MESSAGINGSENDERID=your_sender_id
 VITE_APPID=your_app_id
 
-Run the Project Locally
+4️⃣ Run Locally
 npm run dev
 
-📱 Pages & Routes
-Route	Description	Access
-/	Homepage with banner, popular games & newsletter	Public
-/login	Login page with email/password & Google sign-in	Public
-/register	Register new user	Public
-/games/:id	Game details page	Protected
-/my-profile	User profile page	Protected
-/update-profile	Update user information	Protected
-/forgot-password	Reset password via email	Public
-/*	404 Not Found Page	Public
-/extras	Additional themed route	Public  
+**Home page**
+![Screenshot](./src/assets/pixelhood-gamezone.web.app_.png)
 
 
 🎨 UI Highlights
 
-Clean, modern, and responsive UI built with Tailwind CSS
+Clean modern UI
 
-Game cards with hover effects
+Tailwind responsive layout
 
-Smooth animations via Framer Motion
+Hover animations
 
-Custom 404 page with themed visuals  
+Smooth transitions via Framer Motion
 
+Themed custom 404 page
 
 💡 Challenges Implemented
 
-Password validation logic for secure authentication
+Secure password validation
 
-Dynamic routing and state management
+Dynamic route handling
 
-Integration of Framer Motion for entry animations
+State management
 
-Protected routes using Firebase user context
+Animated UI interactions
 
-Forget password redirect to Gmail after reset
+Password reset with Gmail redirect
 
-Reusable layout and component structure
+Reusable component architecture
 
 👤 Author
 
 👨‍💻 Obaidullah Miazi
 Student & Web Development Enthusiast
 📍 Bangladesh
-🔗 www.linkedin.com/in/obaidullah-miazi  
-📧 obaidullahmiazi.dev@gmail.com
+🔗 LinkedIn: www.linkedin.com/in/obaidullah-miazi
 
+📧 Email: obaidullahmiazi.dev@gmail.com
 
 🏆 Acknowledgement
 
-Special thanks to Programming Hero for providing the project requirements and guidance that helped shape this project.
-
+Thanks to Programming Hero for providing the project structure and guidelines.
 
 📜 License
 
-This project is open source and available under the MIT License
-.
+This project is open-source and available under the MIT License.

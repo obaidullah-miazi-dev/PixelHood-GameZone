@@ -3,6 +3,7 @@ import Banner from '../Components/Banner';
 import AllGames from '../Components/AllGames';
 import PopularGames from '../Components/PopularGames';
 import Newsletter from '../Components/Newsletter';
+import ContactSection from '../Components/ContactSection';
 
 const Home = () => {
     
@@ -13,6 +14,7 @@ const Home = () => {
             <AllGames></AllGames>
             <PopularGames></PopularGames>
             <Newsletter></Newsletter>
+            <ContactSection />
         </div>
     );
 };

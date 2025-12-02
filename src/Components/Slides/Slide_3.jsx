@@ -10,7 +10,7 @@ const Slide_3 = () => {
                 </p>
             </div>
             <div className='flex-1 h-88'>
-                <img className=' w-full mx-auto rounded-md' src="https://www.godisageek.com/wp-content/uploads/PUBG_BATTLEGROUNDS_F2P_Key_Asset_002-1024x576.jpg" alt="" />
+                <img className=' w-full mx-auto rounded-md' src="https://wstatic-prod-boc.krafton.com/common/content/news/20251015/dy7W1yxy_thumb.jpg" alt="" />
             </div>
         </div>
     );

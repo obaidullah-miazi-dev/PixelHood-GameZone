@@ -38,8 +38,8 @@ const Navbar = () => {
 
 
     return (
-        <nav className="w-full py-4">
-            <Container>
+        <nav className="rounded-4xl px-5 py-4 sticky top-2 z-50 bg-black/50 backdrop-blur-2xl w-11/12 mx-auto">
+            
                 <div className="mx-auto flex justify-between items-center h-12 ">
                     <div className="flex items-center gap-2">
                         <NavLink to='/'>
@@ -137,7 +137,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                 )}
-            </Container>
+          
         </nav>
     );
 };
